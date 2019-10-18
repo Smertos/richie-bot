@@ -1,0 +1,6 @@
+{
+    "clientId": "...",
+    "clientSecret": "...",
+    "hostname": "localhost",
+    "port": 8080
+}
