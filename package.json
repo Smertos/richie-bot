@@ -1,12 +1,14 @@
 {
     "name": "richie",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "build/index.js",
     "license": "MIT",
     "scripts": {
         "build": "tsc --outDir build",
-        "start": "node build",
-        "start.watch": "nodemon build",
+        "compose": "docker-compose -f .docker/docker-compose.yml",
+        "start": "node build/index.js",
+        "start.docker": "pm2-runtime start pm2.json",
+        "start.watch": "nodemon build/index.js",
         "watch": "yarn build --watch"
     },
     "dependencies": {
